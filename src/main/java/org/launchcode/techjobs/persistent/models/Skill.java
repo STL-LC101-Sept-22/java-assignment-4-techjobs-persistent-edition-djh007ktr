@@ -1,12 +1,12 @@
 package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
+import javax.validation.constraints.*;
 
 @Entity
 public class Skill extends AbstractEntity {
 
-    @Min(value = 100, message = "Short description under 100 characteres")
+    @Size(min=3, max=100, message = "Short description under 100 characteres")
     private String description;
 
     public String getDescription() {

@@ -6,7 +6,7 @@ import javax.validation.constraints.*;;
 @Entity
 public class Employer extends AbstractEntity {
 
-    @NotEmpty
+    @NotNull
     @Size(min=3, max=30, message="Must be between 3 and 30 characters")
     private String location;
 
